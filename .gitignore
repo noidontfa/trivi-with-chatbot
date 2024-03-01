@@ -8,3 +8,8 @@ react-app/build
 *.png
 *.pkl
 *.pyc
+
+.idea/
+app/staticfiles/
+node_modules/
+react-app/.env

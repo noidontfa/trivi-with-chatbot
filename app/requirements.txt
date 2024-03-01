@@ -18,3 +18,8 @@ nltk
 pandasai
 astor
 openai
+langchain
+altair
+altair_viewer
+retry
+tabulate

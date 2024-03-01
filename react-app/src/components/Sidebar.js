@@ -11,7 +11,8 @@ import {
   faShareAlt,
   faChartBar,
   faFileAlt,
-  faUser
+  faUser,
+  faRobot
 } from "@fortawesome/free-solid-svg-icons";
 import {
   Nav,
@@ -225,10 +226,18 @@ export default (props = {}) => {
                 />
               </CollapsableNavItem> */}
               <NavItem
+                title="Chatbot"
+                icon={faRobot}
+                link={Routes.Chatbot.path}
+              />
+
+              <NavItem
                 title="Documentation"
                 icon={faBook}
                 link={Routes.Documentation.path}
               />
+
+
 
               {/* <CollapsableNavItem eventKey="tables/" title="Tables" icon={faTable}>
                 <NavItem title="Bootstrap Table" link={Routes.BootstrapTables.path} />

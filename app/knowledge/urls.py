@@ -14,4 +14,5 @@ urlpatterns = [
     path("get-test-model-api/<model_type>/<model_id>/<item_id>", get_test_model_api),
     path("get-info-api/<model_type>/<model_id>/<item_id>", get_info_api),
     path("get-answer", get_answer),
+    path("get-conv", get_conv)
 ]

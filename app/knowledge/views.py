@@ -36,6 +36,8 @@ from .ml_functions.association_rule import AssociationRule;
 from .ml_functions.intelligent_answer import IntelligentAnswer;
 from .ml_functions.correlation import Correlation;
 
+from .chatbot.chain import Chain
+
 # Recommendation
 from sklearn.model_selection import train_test_split
 from sklearn.metrics.pairwise import cosine_similarity
@@ -654,6 +656,28 @@ def get_answer(request):
         result = model.answer(question)
 
         return Response(result)
+    except Exception as error:
+        print(error)
+        return Response({
+            'status': 201,
+            'message': 'Get results failed'
+        })
+
+
+@api_view(['POST'])
+def get_conv(request):
+    try:
+        user_serializer = UserSerializer(request.user)
+        org_id = user_serializer.data['org_id']
+        data = json.loads(request.body)
+
+        chatbot = Chain(org_id, data['histories'])
+        result = chatbot.run(data['prompt_input'])
+
+        return Response({
+            **result,
+            'status': 200
+        })
     except Exception as error:
         print(error)
         return Response({

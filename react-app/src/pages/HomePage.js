@@ -27,6 +27,7 @@ import ModelDetail from './ModelDetail';
 import NewModel from './NewModel';
 import TestAPI from './TestAPI';
 import SearchResult from './SearchResult';
+import Chatbot from "./Chatbot";
 
 // components
 import Sidebar from "../components/Sidebar";
@@ -238,6 +239,7 @@ export default () => (
     />
     <RouteWithSidebar exact path={Routes.Profile.path} component={Profile} />
     <RouteWithSidebar exact path={Routes.Organization.path} component={Organization} />
+    <RouteWithSidebar exact path={Routes.Chatbot.path} component={Chatbot}/>
     <Redirect to={Routes.NotFound.path} />
     {/* <RouteWithSidebar exact path={Routes.Profile.path} component={Profile} />
     <RouteWithLoader exact path={Routes.Signup.path} component={Signup} />

@@ -24,6 +24,7 @@ export const Routes = {
     Documentation: {path: "/documentation"},
     Profile: {path: "/profile"},
     ItemDetail: {path: "/data-management/detail/"},
+    Chatbot: {path: "/chat"},
 
     Customer: { path: "customer"},
     Event: { path: "event"},
